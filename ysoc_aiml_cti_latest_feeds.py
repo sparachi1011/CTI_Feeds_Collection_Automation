@@ -401,10 +401,8 @@ def ysoc_connect_es():
         if es_user_name == 'pcap_script_execution':
             basic_auth = (
                 es_user_name, es_user_pswd)
-            es_ids = Elasticsearch(
-                # ['https://060652a6cf6c4ef0b5fbc3362216e5d4.japaneast.azure.elastic-cloud.com:443'],
-                # ['https://060652a6cf6c4ef0b5fbc3362216e5d4.japaneast.azure.elastic-cloud.com:443'],
-                ['https://it-ot-soc-lab.es.japaneast.azure.elastic-cloud.com:9243'],
+            es_ids = Elasticsearch[
+                ["Your Elastic URL"],
                 basic_auth=basic_auth,
                 verify_certs=True,
                 request_timeout=300)
